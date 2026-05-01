@@ -1,9 +1,9 @@
-# Resilient LLM Fine-Tuning & Inference Framework
+# 🚀 Resilient LLM Fine-Tuning & Inference Framework
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c?logo=pytorch)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-F9D423?logo=huggingface)
-RichUI
+![Rich](https://img.shields.io/badge/CLI-Rich-000000)
 
 An end-to-end, fault-tolerant pipeline engineered for fine-tuning and running inference on Large Language Models (up to 14B parameters) in distributed and highly constrained cloud environments (like Google Colab/Shared GPUs). 
 
@@ -11,7 +11,7 @@ This repository demonstrates advanced **MLOps**, **Distributed Systems Engineeri
 
 ---
 
-## Key Engineering Features
+## ✨ Key Engineering Features
 
 ### 1. Fault-Tolerant Checkpointing & Atomic State Recovery
 Cloud environments are preemptible. This framework guarantees zero data loss:
@@ -26,11 +26,11 @@ Handling a 14B model on a single T4 GPU requires extreme memory efficiency:
 * **4-bit NF4 Quantization:** Implements Double Quantization via `BitsAndBytes` to fit massive Qwen models into ~8GB of VRAM.
 
 ### 3. High-Performance SFT Pipeline
-* **Knowledge Distillation:** Pipeline engineered to use outputs from larger Qwen 14B model to train smaller, efficient 4B/9B parameter student models.
+* **Knowledge Distillation:** Pipeline engineered to use outputs from a larger Qwen 14B model to train smaller, efficient 4B/9B parameter student models.
 * **Custom SFTTrainer:** Overrides base HuggingFace classes to implement hard-balanced category sampling, custom cross-entropy loss masking, and safe directory resolution across distributed drives.
 
 ### 4. Beautiful, Real-Time MLOps Telemetry
-Built entirely with `richUI`, the pipeline provides a commercial-grade terminal UI:
+Built entirely with the `rich` Python library, the pipeline provides a commercial-grade terminal UI:
 * Real-time ETA, throughput (tweets/sec), and VRAM tracking.
 * Live-streaming of the model's Chain-of-Thought (`<think>`) generation.
 * Richly formatted post-run analysis panels (Confusion Matrices, Precision/Recall, Error Rates).
@@ -41,11 +41,13 @@ Built entirely with `richUI`, the pipeline provides a commercial-grade terminal 
 
 ### The Inference Engine (Live Telemetry)
 *The custom `rich` dashboard tracking VRAM usage, dynamic batch sizing, and real-time generation metrics.*
-> **<img width="1012" height="315" alt="image" src="https://github.com/user-attachments/assets/f6922092-5b86-4d5e-b2eb-25785573dca5" />**
 
-### Distributed Result generation and saving
-*Matplotlib-generated artifacts tracking DEI classification shifts across different university datasets.*
-> **<img width="993" height="417" alt="image" src="https://github.com/user-attachments/assets/4cc1f52e-a59f-4c92-86a7-04d446f9106e" />**
+<img width="1012" height="315" alt="Inference Engine Telemetry" src="https://github.com/user-attachments/assets/f6922092-5b86-4d5e-b2eb-25785573dca5" />
+
+### Distributed Result Generation & Aggregation
+*Multi-folder dataset scanning, processing, and global aggregation tracked via live progress bars.*
+
+<img width="993" height="417" alt="Data Aggregation Progress" src="https://github.com/user-attachments/assets/4cc1f52e-a59f-4c92-86a7-04d446f9106e" />
 
 ---
 
@@ -64,3 +66,13 @@ graph TD;
     H --> I[TextIteratorStreamer];
     I --> J[Atomic Output Flush];
     end
+```
+### Transparent Execution Logging & System Auditing
+*The pipeline doesn't just train; it audits itself. Custom loggers track dependency pinning, root-level debris cleanup, and precise VRAM allocations.*
+
+<img width="1249" height="393" alt="Screenshot From 2026-05-01 13-20-56" src="https://github.com/user-attachments/assets/265d1595-9858-47ee-a9d4-72f001a869dc" />
+
+
+> *Startup sequence verifying paths, cleaning up stale checkpoints, and fixing random seeds.*
+<img width="1464" height="473" alt="Screenshot From 2026-05-01 13-21-52" src="https://github.com/user-attachments/assets/5645bdc9-1452-46cc-adb2-9d01fb4225b8" />
+> *Model loading telemetry bypassing HuggingFace fast-paths and confirming memory-efficient vocabulary slice loading (lm_head bypass).*
