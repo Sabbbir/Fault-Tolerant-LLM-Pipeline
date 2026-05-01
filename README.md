@@ -68,8 +68,7 @@ graph TD;
 ```
 ### Transparent Execution Logging & System Auditing
 *The pipeline doesn't just train; it audits itself. Custom loggers track dependency pinning, root-level debris cleanup, and precise VRAM allocations.*
-<img width="1050" height="356" alt="image" src="https://github.com/user-attachments/assets/18635c75-b004-4b34-b808-92520a9f98c4" />
-
+<img width="1249" height="393" alt="Screenshot From 2026-05-01 13-20-56" src="https://github.com/user-attachments/assets/d491cca9-af3a-4221-a112-229ae93520cf" />
 > *Startup sequence verifying paths, cleaning up stale checkpoints, and fixing random seeds.*
 
 
