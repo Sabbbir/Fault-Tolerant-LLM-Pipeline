@@ -26,7 +26,7 @@ Handling a 14B model on a single T4 GPU requires extreme memory efficiency:
 * **4-bit NF4 Quantization:** Implements Double Quantization via `BitsAndBytes` to fit massive Qwen models into ~8GB of VRAM.
 
 ### 3. High-Performance SFT Pipeline
-* **Knowledge Distillation:** Pipeline engineered to use outputs from larger frontier models (Gemini 3 Flash / Qwen 14B) to train smaller, efficient 4B parameter student models.
+* **Knowledge Distillation:** Pipeline engineered to use outputs from larger Qwen 14B model to train smaller, efficient 4B/9B parameter student models.
 * **Custom SFTTrainer:** Overrides base HuggingFace classes to implement hard-balanced category sampling, custom cross-entropy loss masking, and safe directory resolution across distributed drives.
 
 ### 4. Beautiful, Real-Time MLOps Telemetry
@@ -41,7 +41,7 @@ Built entirely with `richUI`, the pipeline provides a commercial-grade terminal 
 
 ### The Inference Engine (Live Telemetry)
 *The custom `rich` dashboard tracking VRAM usage, dynamic batch sizing, and real-time generation metrics.*
-> **[❗ ACTION: Insert a screenshot here of the "GLM Inference Engine v11.0" output from your inference notebook (Page 23 of your PDF) showing the green/yellow progress bars and VRAM stats]**
+> **<img width="1012" height="315" alt="image" src="https://github.com/user-attachments/assets/f6922092-5b86-4d5e-b2eb-25785573dca5" />**
 
 ### Post-Classification Analytics
 *Auto-generated confusion matrices and confidence statistics rendered directly in the terminal.*
