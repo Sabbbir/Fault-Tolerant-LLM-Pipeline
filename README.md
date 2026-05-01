@@ -1,9 +1,9 @@
-# 🚀 Resilient LLM Fine-Tuning & Inference Framework
+# Resilient LLM Fine-Tuning & Inference Framework
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c?logo=pytorch)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-F9D423?logo=huggingface)
-![Rich](https://img.shields.io/badge/CLI-Rich-000000)
+![RichUI](https://img.shields.io/badge/RichUI)
 
 An end-to-end, fault-tolerant pipeline engineered for fine-tuning and running inference on Large Language Models (up to 14B parameters) in distributed and highly constrained cloud environments (like Google Colab/Shared GPUs). 
 
@@ -11,7 +11,7 @@ This repository demonstrates advanced **MLOps**, **Distributed Systems Engineeri
 
 ---
 
-## ✨ Key Engineering Features
+## Key Engineering Features
 
 ### 1. Fault-Tolerant Checkpointing & Atomic State Recovery
 Cloud environments are preemptible. This framework guarantees zero data loss:
@@ -30,7 +30,7 @@ Handling a 14B model on a single T4 GPU requires extreme memory efficiency:
 * **Custom SFTTrainer:** Overrides base HuggingFace classes to implement hard-balanced category sampling, custom cross-entropy loss masking, and safe directory resolution across distributed drives.
 
 ### 4. Beautiful, Real-Time MLOps Telemetry
-Built entirely with `rich`, the pipeline provides a commercial-grade terminal UI:
+Built entirely with `richUI`, the pipeline provides a commercial-grade terminal UI:
 * Real-time ETA, throughput (tweets/sec), and VRAM tracking.
 * Live-streaming of the model's Chain-of-Thought (`<think>`) generation.
 * Richly formatted post-run analysis panels (Confusion Matrices, Precision/Recall, Error Rates).
