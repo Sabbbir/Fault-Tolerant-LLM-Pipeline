@@ -41,8 +41,7 @@ Built entirely with the `rich` Python library, the pipeline provides a commercia
 
 ### The Inference Engine (Live Telemetry)
 *The custom `rich` dashboard tracking VRAM usage, dynamic batch sizing, and real-time generation metrics.*
-
-<img width="1012" height="315" alt="Inference Engine Telemetry" src="https://github.com/user-attachments/assets/f6922092-5b86-4d5e-b2eb-25785573dca5" />
+<img width="1050" height="356" alt="image" src="https://github.com/user-attachments/assets/8ed87725-269f-47b5-913c-f351688aca10" />
 
 ### Distributed Result Generation & Aggregation
 *Multi-folder dataset scanning, processing, and global aggregation tracked via live progress bars.*
