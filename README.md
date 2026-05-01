@@ -72,7 +72,9 @@ graph TD;
 
 <img width="1249" height="393" alt="Screenshot From 2026-05-01 13-20-56" src="https://github.com/user-attachments/assets/265d1595-9858-47ee-a9d4-72f001a869dc" />
 
-
 > *Startup sequence verifying paths, cleaning up stale checkpoints, and fixing random seeds.*
+
+
 <img width="1464" height="473" alt="Screenshot From 2026-05-01 13-21-52" src="https://github.com/user-attachments/assets/5645bdc9-1452-46cc-adb2-9d01fb4225b8" />
+
 > *Model loading telemetry bypassing HuggingFace fast-paths and confirming memory-efficient vocabulary slice loading (lm_head bypass).*
