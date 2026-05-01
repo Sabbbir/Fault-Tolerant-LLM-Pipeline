@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c?logo=pytorch)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-F9D423?logo=huggingface)
-![RichUI](https://img.shields.io/badge/RichUI)
+![RichUI](https://img.shields.io/badge/any_text-you_like-blue)
 
 An end-to-end, fault-tolerant pipeline engineered for fine-tuning and running inference on Large Language Models (up to 14B parameters) in distributed and highly constrained cloud environments (like Google Colab/Shared GPUs). 
 
