@@ -43,10 +43,6 @@ Built entirely with `richUI`, the pipeline provides a commercial-grade terminal 
 *The custom `rich` dashboard tracking VRAM usage, dynamic batch sizing, and real-time generation metrics.*
 > **<img width="1012" height="315" alt="image" src="https://github.com/user-attachments/assets/f6922092-5b86-4d5e-b2eb-25785573dca5" />**
 
-### Post-Classification Analytics
-*Auto-generated confusion matrices and confidence statistics rendered directly in the terminal.*
-> **[❗ ACTION: Insert a screenshot here of the "Block F-A Output" showing the "CATEGORY DISTRIBUTION", "Confidence Statistics", and "Label Correction Summary" panels (Page 38/39 of your PDF)]**
-
 ### Distributed Result generation and saving
 *Matplotlib-generated artifacts tracking DEI classification shifts across different university datasets.*
 > **<img width="993" height="417" alt="image" src="https://github.com/user-attachments/assets/4cc1f52e-a59f-4c92-86a7-04d446f9106e" />**
